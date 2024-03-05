@@ -19,7 +19,7 @@ public abstract class AbstractRacer
 
 	public String toString()
 	{
-		return "Racer[" + name + ", Position: " + position;
+		return "Racer[" + name + ", Position: " + position + "]";
 	}
 
 	public int getPosition()
