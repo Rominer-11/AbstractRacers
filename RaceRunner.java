@@ -64,6 +64,10 @@ public class RaceRunner
 			System.out.print("\n");
 		}
 		
+		race.addRacer(new Tortoise("Boberton"));
+		race.addRacer(new Hare("Joberton"));
+		race.addRacer(new BananaKart("Loberton"));
+
 		while (!raceFinished)
 		{
 			winners = race.update();
