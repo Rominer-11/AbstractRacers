@@ -7,30 +7,33 @@
 public class Hare extends AbstractRacer
 {
 	private int energy;
-	private int resting;
+	private boolean resting;
 
 	public Hare(String name)
 	{
 		super(name);
-		energy = (int) (Math.random() * 10);
+		this.energy = (int) (Math.random() * 10);
+		this.resting = false;
 	}
 
 	public void move()
 	{
-		if (energy > 0)
+		if (!resting)
 		{
-			setPosition(getPosition() + 3);
+			setPosition(getPosition() + 2);
 			energy--;
-			if (energy == 0)
+			if (energy <= 0)
 			{
-				resting = (int) (Math.random() * 10);
+				resting = true;
+				energy = (int) (Math.random() * 10);
 			}
 		}
 		else
 		{
-			resting--;
-			if (resting == 0)
+			energy--;
+			if (energy <= 0)
 			{
+				resting = false;
 				energy = (int) (Math.random() * 10);
 			}
 		}

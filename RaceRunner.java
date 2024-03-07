@@ -22,7 +22,7 @@ public class RaceRunner
 		ArrayList<AbstractRacer> winners = new ArrayList<AbstractRacer>();
 		
 		race.addRacer(new Tortoise("Boberton"));
-		race.addRacer(new Tortoise("Joberton"));
+		race.addRacer(new Hare("Joberton"));
 
 		while (!raceFinished)
 		{
