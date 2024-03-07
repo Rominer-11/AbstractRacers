@@ -12,9 +12,16 @@ public class RaceRunner
 	public static void main(String[] args)
 	{
 		Scanner in = new Scanner(System.in);
-
-		System.out.println("Enter race length.");
-		int length = in.nextInt();
+		while (true)
+		{
+			System.out.println("Enter race length.");
+			int length = in.nextInt();
+			race(length);
+		}
+	}
+	
+	public static void race(int length)
+	{
 		Race race = new Race(length);
 
 		boolean raceFinished = false;
@@ -33,10 +40,22 @@ public class RaceRunner
 				System.out.println("Finished");
 			}
 		}
-
-		for (AbstractRacer racer : winners)
+		
+		if (winners.size() == 1)
 		{
-			System.out.println(racer.toString());
+			System.out.println("The winner is...");
+			for (AbstractRacer racer : winners)
+			{
+				System.out.println(racer.toString());
+			}
+		}
+		else
+		{
+			System.out.println("It's a tie! The winners are...");
+			for (AbstractRacer racer : winners)
+			{
+				System.out.println(racer.toString());
+			}
 		}
 	}
 }
