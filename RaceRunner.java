@@ -15,14 +15,14 @@ public class RaceRunner
 
 		System.out.println("Enter race length.");
 		int length = in.nextInt();
-		System.out.println(length);
 		Race race = new Race(length);
 
 		boolean raceFinished = false;
 		ArrayList<AbstractRacer> winners = new ArrayList<AbstractRacer>();
 		
-		race.addRacer(new Tortoise("Boberton"));
-		race.addRacer(new Hare("Joberton"));
+		race.addRacer(new Tortoise("Tortoiseerton"));
+		race.addRacer(new Hare("Hareerton"));
+		race.addRacer(new BananaKart("BananaKarterton"));
 
 		while (!raceFinished)
 		{
