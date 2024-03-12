@@ -13,7 +13,7 @@ public class BananaKart extends AbstractRacer
         {
             setPosition(getPosition() + 7);
         }
-        else if (Gas < 9) //Normal
+        else if (Gas < 7) //Normal
         {
             double moveC = Math.random();
             if (moveC < 0.5)
