@@ -15,7 +15,11 @@ public class BananaKart extends AbstractRacer
         }
         else if (Gas < 9) //Normal
         {
-            setPosition(getPosition() + 2);
+            double moveC = Math.random();
+            if (moveC < 0.5)
+                setPosition(getPosition() + 1);
+            else if (moveC >=0.5 )
+                setPosition(getPosition() + 2);
         }
         else // vegetable
         {
